@@ -15,7 +15,7 @@ const footerlinks = [
   },
   {
     title: "Other Relevant Documents",
-    href: "https://drive.google.com/file/d/1yN6XLPCdoxd3kRVJIxjUwKOi2KQ49R15/view?usp=sharing",
+    href: "https://t.ly/0fHFc",
   }
 ];
 
