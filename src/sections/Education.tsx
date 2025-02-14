@@ -5,6 +5,8 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+
+
 const portfolioProjects = [
   {
     company: "San jose State University",
@@ -27,7 +29,7 @@ const portfolioProjects = [
 
 export const EducationSection = () => {
   return (
-  <section className="pb-16 lg:py-24">
+  <section id="Education" className="pb-16 lg:py-24">
     <div>
       <div className="container">
         <SectionHeader 
@@ -37,7 +39,7 @@ export const EducationSection = () => {
           {portfolioProjects.map((project, projectIndex) => (
             <Card 
             key={project.title} 
-            className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 pb-0 sticky"
+            className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 lg:pb-0 sm:pb-10 sticky"
             style={{
               top:`calc(64px + ${projectIndex * 40}px`,
             }}>

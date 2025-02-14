@@ -16,7 +16,7 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 
 
-const techStack = [
+const techStack1 = [
   { title: "Java", icon: FaJava },
   { title: "HTML", icon: FaHtml5 },
   { title: "CSS", icon: FaCss3Alt },
@@ -24,7 +24,11 @@ const techStack = [
   { title: "Python", icon: FaPython },
   { title: "Typescript", icon: SiTypescript },
   { title: "JavaScript", icon: FaJs },
-  { title: "Bash", icon: SiGnubash },
+  { title: "Bash", icon: SiGnubash }
+  
+];
+
+const techStack2 = [
   { title: "Spring", icon: SiSpring },
   { title: "React", icon: FaReact },
   { title: "Node", icon: FaNodeJs },
@@ -36,7 +40,10 @@ const techStack = [
   { title: "Kubernetes", icon: SiKubernetes },
   { title: "Helm", icon: SiHelm },
   { title: "Ansible", icon: SiAnsible },
-  { title: "Jenkins", icon: FaJenkins },
+  { title: "Jenkins", icon: FaJenkins }
+];
+
+const techStack3 = [
   { title: "MySQL", icon: SiMysql },
   { title: "PostgreSQL", icon: SiPostgresql },
   { title: "CassandraDB", icon: SiApachecassandra },
@@ -68,7 +75,8 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
-  return <div className="py-20">
+  return (
+  <section id="about" className="py-20">
     <SectionHeader 
       eyebrow="Tell you something about myself?" 
       title="Enterprise Software Dev and Cloud Engineer | SE @ Xoriant | Ext-SE @ Nokia" 
@@ -83,17 +91,21 @@ export const AboutSection = () => {
     />
     <div className="container">
       <div className="mt-20 flex flex-col gap-8">
-        <Card className="h-[320px] p-0">
+        <Card className="h-[400px] p-0">
           <CardHeader 
             title="My Toolbox" 
-            description="Tech" 
-            className="px-6 pt-6"
+            description="Expert in Design, Coding & Cloud" 
+            className="px-6 pt-6 "
           />
-          <ToolboxItems techStack={techStack} className="mt-6 "/>
-          <ToolboxItems techStack={techStack} 
-            className="mt-6"
+          <ToolboxItems techStack={techStack1} className="mt-6 " itemsWrapperClassName="animate-move-left [animation-duration:60s]"/>
+          <ToolboxItems techStack={techStack2} className="mt-6 " itemsWrapperClassName="animate-move-left [animation-duration:60s]"/>
+          <ToolboxItems techStack={techStack3} className="mt-6 " itemsWrapperClassName="animate-move-left [animation-duration:60s]"/>
+            
+            {/* No Animation */}
+            {/* className="mt-6"
             itermsWrapperClassName="-translate-x-1/2"
-          />
+          /> */}
+
         </Card>
         <Card>
           <CardHeader 
@@ -103,11 +115,12 @@ export const AboutSection = () => {
           <div>
           <ToolboxItems techStack={hobbies} 
             className="mt-6"
-            itermsWrapperClassName="-translate-x-1/2"
+             itemsWrapperClassName="animate-move-left [animation-duration:30s]"
           />
           </div>
         </Card>
       </div>
     </div>
-  </div>;
+  </section>
+  );
 };
